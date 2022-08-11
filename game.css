@@ -70,10 +70,12 @@ body {
     margin: 20px auto;
     background-color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    border-radius: 30%;
 }
 .button:active{
     background-color: gray;
 }
-/* .button:hover{
-    background-color: silver;
-} */
+.button:hover{
+    border: 1px solid black;
+}
