@@ -1,4 +1,4 @@
-let lastValue = "0";
+let lastValue = "O";
 let display = document.getElementById("display");
 display.textContent = "player 1's turn to play"
 // get all div (box) or button
@@ -16,13 +16,13 @@ for (let box of boxes) {
             lastValue = "O";
             display.textContent = "Player 1's turn to play";
             checkGameStatus();
-            checkDraw();
+            // checkDraw();
         } else {
             box.textContent = "X";
             lastValue = "X";
             display.textContent = "Player 2's turn to play";
             checkGameStatus();
-            checkDraw();
+            // checkDraw();
         }
     })
 }
@@ -33,6 +33,9 @@ controlBtn.addEventListener("click", () => {
 })
 
 function checker(first, second, third) {
+    if (display.textContent.includes("won the game")) {
+        return ;
+    }
     if (
         boxes[first].textContent === "X" &&
         boxes[second].textContent === "X" &&
@@ -45,6 +48,9 @@ function checker(first, second, third) {
         boxes[third].textContent === "O"
     ) {
         disableButtonWhenGameIsWon("Player 2");
+        return;
+    } else {
+        checkDraw()
     }
 }
 
