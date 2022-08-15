@@ -29,7 +29,7 @@ for (let box of boxes) {
 
 let controlBtn = document.getElementById("controlBtn");
 controlBtn.addEventListener("click", () => {
-    window.location.href = "game.html"
+    window.location.href = "index.html"
 })
 
 function checker(first, second, third) {
