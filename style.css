@@ -96,3 +96,10 @@ body {
     /* justify-content: center; */
     /* align-items: center; */
 }
+.winner{
+    color: white;
+    font-size: 3.5vmax;
+}
+.winner ul{
+    list-style: none;
+}

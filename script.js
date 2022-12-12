@@ -3,6 +3,22 @@ let display = document.getElementById("display");
 display.textContent = "player 1's turn to play"
 // get all div (box) or button
 let boxes = document.querySelectorAll(".box");
+// let player1 = document.querySelector(".player1")
+// let player2 = document.querySelector(".player2")
+// let player1WonSaved = localStorage.getItem("player1")
+// let player2WonSaved = localStorage.getItem("player2")
+
+// localStorage.setItem('player1', 0)
+// localStorage.setItem('player2', 0)
+
+
+// let player1Won = () => {
+//     localStorage.setItem('player1', player1WonSaved + 1)
+// }
+
+// let player2Won = () => {
+//     localStorage.setItem('player2', player2WonSaved + 1)
+// }
 
 // set click listener on all boxes
 for (let box of boxes) {
@@ -42,12 +58,14 @@ function checker(first, second, third) {
         boxes[third].textContent === "X"
     ) {
         disableButtonWhenGameIsWon("Player 1");
+        // localStorage.setItem('player1', player1WonSaved + 1)
     } else if (
         boxes[first].textContent === "O" &&
         boxes[second].textContent === "O" &&
         boxes[third].textContent === "O"
     ) {
         disableButtonWhenGameIsWon("Player 2");
+        // localStorage.setItem('player2', player2WonSaved + 1)
         return;
     } else {
         checkDraw()
@@ -83,3 +101,6 @@ function checkDraw() {
     }
     display.textContent ="Draw"
 }
+
+player1.innerHTML = player1WonSaved
+player2.innerHTML = player2WonSaved
