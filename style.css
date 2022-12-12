@@ -11,7 +11,7 @@ body {
     /* background-color: black; */
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: xx-large;
+    font-size: 3vmax;
     /* margin: 0 10%; */
     /* border-radius: 100px; */
 }
@@ -27,8 +27,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 400px;
-    margin: 40px auto;
+    width: 40vw;
+    margin: 4vmax auto;
     border: 1px solid white;
     border-radius: 4px;
     color: white;
